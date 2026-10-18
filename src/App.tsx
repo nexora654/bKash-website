@@ -190,7 +190,7 @@ export default function App() {
   // If user is already authenticated by Supabase, show their dashboard
   if (!isCheckingAuth && currentUser) {
     return (
-      <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-0 sm:p-4 md:p-6 font-['Hind_Siliguri',sans-serif] overflow-x-hidden">
+      <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-2 sm:p-4 md:p-6 font-['Hind_Siliguri',sans-serif] overflow-x-hidden">
         <AuthenticatedDashboard
           user={currentUser}
           onSignOut={() => {
@@ -203,40 +203,40 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-0 sm:p-3 md:p-4 font-['Hind_Siliguri',sans-serif] overflow-x-hidden">
-      {/* Main Container - Fully responsive for all screen sizes and mobile aspect ratios */}
-      <div className="relative w-full max-w-[430px] min-h-[100dvh] sm:min-h-0 sm:h-auto sm:max-h-[min(820px,calc(100dvh-1.5rem))] sm:rounded-[36px] sm:shadow-2xl sm:shadow-pink-500/10 sm:border sm:border-pink-100/80 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300">
+    <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-2 sm:p-4 md:p-6 font-['Hind_Siliguri',sans-serif]">
+      {/* Main Container - Fully responsive with identical sleek card design across all devices */}
+      <div className="relative w-full max-w-[430px] my-auto rounded-[28px] sm:rounded-[36px] shadow-xl sm:shadow-2xl shadow-pink-500/10 border border-pink-100/90 bg-white flex flex-col justify-between overflow-x-hidden overflow-y-auto transition-all duration-300 max-h-[calc(100dvh-1rem)] sm:max-h-[min(840px,calc(100dvh-2rem))]">
         {/* Decorative Top-Left Waves */}
         <TopWaveDecoration />
 
         {/* Top Content Area with responsive padding & safe-top */}
-        <div className="relative z-10 px-5 sm:px-7 pt-4 sm:pt-6 pb-2 sm:pb-3 flex-1 flex flex-col">
+        <div className="relative z-10 px-5 sm:px-7 pt-5 sm:pt-7 pb-2 sm:pb-3 flex-1 flex flex-col">
           {/* Brand Logo & Wordmark Header */}
-          <div className="text-center pt-1 sm:pt-2">
-              <div className="inline-flex items-center justify-center gap-2 sm:gap-2.5">
-                <span className="text-[32px] sm:text-[40px] font-extrabold tracking-tight font-['Plus_Jakarta_Sans',sans-serif] leading-none">
-                  <span className="text-[#E2136E]">b</span>
-                  <span className="text-[#231F20]">Kash</span>
-                </span>
-                {/* Geometric Origami Bird Logo beside bKash - prominent size matching reference image */}
-                <OrigamiBird className="h-[50px] sm:h-[64px] w-auto translate-y-[2px]" />
-              </div>
-
-              {/* Tagline beneath logo */}
-              <p className="text-[#231F20] text-xs sm:text-sm font-medium mt-1 sm:mt-1.5 tracking-wide">
-                নিরাপদ লেনদেন, সহজ জীবন
-              </p>
+          <div className="text-center pt-1.5 sm:pt-2">
+            <div className="inline-flex items-center justify-center gap-2 sm:gap-2.5">
+              <span className="text-[34px] sm:text-[40px] font-extrabold tracking-tight font-['Plus_Jakarta_Sans',sans-serif] leading-none">
+                <span className="text-[#E2136E]">b</span>
+                <span className="text-[#231F20]">Kash</span>
+              </span>
+              {/* Geometric Origami Bird Logo beside bKash - prominent size matching reference image */}
+              <OrigamiBird className="h-[46px] sm:h-[56px] w-auto translate-y-[2px]" />
             </div>
 
-            {/* Login Section Heading & Subtitle */}
-            <div className="mt-3 sm:mt-5 text-left">
-              <h1 className="text-[20px] sm:text-[25px] font-bold text-[#231F20] leading-tight tracking-tight">
-                লগইন করুন
-              </h1>
-              <p className="text-slate-500 text-xs sm:text-sm mt-0.5 sm:mt-1">
-                আপনার মোবাইল নম্বর দিয়ে লগইন করুন
-              </p>
-            </div>
+            {/* Tagline beneath logo */}
+            <p className="text-[#231F20] text-xs sm:text-sm font-medium mt-1 sm:mt-1.5 tracking-wide">
+              নিরাপদ লেনদেন, সহজ জীবন
+            </p>
+          </div>
+
+          {/* Login Section Heading & Subtitle */}
+          <div className="mt-3.5 sm:mt-5 text-left">
+            <h1 className="text-[20px] sm:text-[24px] font-bold text-[#231F20] leading-tight tracking-tight">
+              লগইন করুন
+            </h1>
+            <p className="text-slate-500 text-xs sm:text-sm mt-0.5 sm:mt-1">
+              আপনার মোবাইল নম্বর দিয়ে লগইন করুন
+            </p>
+          </div>
 
           {/* Validation Error Message Banner */}
           {validationError && (

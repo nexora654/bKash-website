@@ -18,8 +18,8 @@ export const CitySkylineBridge: React.FC<{ className?: string }> = ({ className 
         viewBox="0 0 600 240"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto max-h-[110px] sm:max-h-[155px] block"
-        preserveAspectRatio="xMidYMax slice"
+        className="w-full h-auto block"
+        preserveAspectRatio="xMidYMax meet"
       >
         <defs>
           {/* Sky gentle glow gradient in soft bKash rose */}
@@ -71,7 +71,7 @@ export const CitySkylineBridge: React.FC<{ className?: string }> = ({ className 
         <rect width="600" height="240" fill="url(#skyGrad)" />
 
         {/* --- 1. FLYING ORIGAMI BIRD IN SKY (Exact match to Origami Magenta Bird Logo.png) --- */}
-        <g transform="translate(255, 12) scale(1.18)">
+        <g transform="translate(255, 20) scale(1.15)">
           {/* 1. Flap under the main wing */}
           <polygon
             points="26,19 35,30 31,18"

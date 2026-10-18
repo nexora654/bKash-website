@@ -17,19 +17,20 @@ interface OrigamiBirdProps {
  */
 export const OrigamiBird: React.FC<OrigamiBirdProps> = ({
   className = '',
-  size = 48,
+  size,
   height,
   width,
 }) => {
-  // If height/width are provided, use them; otherwise scale proportionally based on size
-  const actualHeight = height ?? size;
-  const actualWidth = width ?? (typeof actualHeight === 'number' ? Math.round(actualHeight * (58 / 82)) : undefined);
+  // If size, height, or width is explicitly specified, use it. Otherwise, let CSS className handle sizing via viewBox.
+  const resolvedHeight = height ?? size;
+  const resolvedWidth = width ?? (typeof resolvedHeight === 'number' ? Math.round(resolvedHeight * (58 / 82)) : undefined);
 
   return (
     <svg
-      width={actualWidth}
-      height={actualHeight}
+      width={resolvedWidth}
+      height={resolvedHeight}
       viewBox="23 9 58 83"
+      preserveAspectRatio="xMidYMid meet"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`inline-block select-none shrink-0 ${className}`}
