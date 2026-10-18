@@ -190,7 +190,7 @@ export default function App() {
   // If user is already authenticated by Supabase, show their dashboard
   if (!isCheckingAuth && currentUser) {
     return (
-      <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-2 sm:p-4 md:p-6 font-['Hind_Siliguri',sans-serif] overflow-x-hidden">
+      <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-0 sm:p-4 md:p-6 font-['Hind_Siliguri',sans-serif] overflow-x-hidden">
         <AuthenticatedDashboard
           user={currentUser}
           onSignOut={() => {
@@ -203,37 +203,37 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-2 sm:p-4 md:p-6 font-['Hind_Siliguri',sans-serif]">
-      {/* Main Container - Fully responsive with identical sleek card design across all devices */}
-      <div className="relative w-full max-w-[430px] my-auto rounded-[28px] sm:rounded-[36px] shadow-xl sm:shadow-2xl shadow-pink-500/10 border border-pink-100/90 bg-white flex flex-col justify-between overflow-x-hidden overflow-y-auto transition-all duration-300 max-h-[calc(100dvh-1rem)] sm:max-h-[min(840px,calc(100dvh-2rem))]">
+    <div className="min-h-[100dvh] w-full bg-[#FAF5F7] flex flex-col items-center justify-center p-0 sm:p-4 md:p-6 font-['Hind_Siliguri',sans-serif] overflow-x-hidden">
+      {/* Main Container - Fully responsive for all screen sizes and mobile aspect ratios */}
+      <div className="relative w-full max-w-[430px] sm:rounded-[36px] sm:shadow-2xl sm:shadow-pink-500/10 sm:border sm:border-pink-100/80 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 min-h-[100dvh] sm:min-h-[820px]">
         {/* Decorative Top-Left Waves */}
         <TopWaveDecoration />
 
         {/* Top Content Area with responsive padding & safe-top */}
-        <div className="relative z-10 px-5 sm:px-7 pt-5 sm:pt-7 pb-2 sm:pb-3 flex-1 flex flex-col">
+        <div className="relative z-10 px-5 sm:px-8 pt-8 sm:pt-14 pb-4 flex-1 flex flex-col">
           {/* Brand Logo & Wordmark Header */}
-          <div className="text-center pt-1.5 sm:pt-2">
+          <div className="text-center pt-1 sm:pt-4">
             <div className="inline-flex items-center justify-center gap-2 sm:gap-2.5">
-              <span className="text-[34px] sm:text-[40px] font-extrabold tracking-tight font-['Plus_Jakarta_Sans',sans-serif] leading-none">
+              <span className="text-[36px] sm:text-[44px] font-extrabold tracking-tight font-['Plus_Jakarta_Sans',sans-serif] leading-none">
                 <span className="text-[#E2136E]">b</span>
                 <span className="text-[#231F20]">Kash</span>
               </span>
               {/* Geometric Origami Bird Logo beside bKash - prominent size matching reference image */}
-              <OrigamiBird className="h-[46px] sm:h-[56px] w-auto translate-y-[2px]" />
+              <OrigamiBird className="h-[56px] sm:h-[70px] w-auto translate-y-[3px]" />
             </div>
 
             {/* Tagline beneath logo */}
-            <p className="text-[#231F20] text-xs sm:text-sm font-medium mt-1 sm:mt-1.5 tracking-wide">
+            <p className="text-[#231F20] text-sm sm:text-base font-medium mt-2.5 sm:mt-3 tracking-wide">
               নিরাপদ লেনদেন, সহজ জীবন
             </p>
           </div>
 
           {/* Login Section Heading & Subtitle */}
-          <div className="mt-3.5 sm:mt-5 text-left">
-            <h1 className="text-[20px] sm:text-[24px] font-bold text-[#231F20] leading-tight tracking-tight">
+          <div className="mt-8 sm:mt-12 text-left">
+            <h1 className="text-[24px] sm:text-[30px] font-bold text-[#231F20] leading-tight tracking-tight">
               লগইন করুন
             </h1>
-            <p className="text-slate-500 text-xs sm:text-sm mt-0.5 sm:mt-1">
+            <p className="text-slate-500 text-sm sm:text-[15px] mt-1 sm:mt-1.5">
               আপনার মোবাইল নম্বর দিয়ে লগইন করুন
             </p>
           </div>
@@ -273,21 +273,21 @@ export default function App() {
           )}
 
           {/* Login Form */}
-          <form onSubmit={handleSubmit} action="javascript:void(0);" className="mt-3.5 sm:mt-5 space-y-2.5 sm:space-y-3.5">
+          <form onSubmit={handleSubmit} action="javascript:void(0);" className="mt-5 sm:mt-6 space-y-3.5 sm:space-y-4">
             {/* 1. Mobile Number Field */}
             <div className="relative">
               <label htmlFor="mobile-input" className="sr-only">
                 মোবাইল নম্বর
               </label>
-              <div className="flex items-center bg-white border border-slate-200 hover:border-slate-300 focus-within:border-[#E2136E] focus-within:ring-2 focus-within:ring-[#E2136E]/20 rounded-xl sm:rounded-2xl px-3.5 sm:px-4 py-2.5 sm:py-3 transition-all shadow-xs">
+              <div className="flex items-center bg-white border border-slate-200 hover:border-slate-300 focus-within:border-[#E2136E] focus-within:ring-2 focus-within:ring-[#E2136E]/20 rounded-2xl px-4 py-3 sm:py-3.5 transition-all shadow-xs">
                 {/* Phone icon */}
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 shrink-0" />
+                <Phone className="w-5 h-5 text-slate-500 shrink-0" />
 
                 {/* Vertical Divider Line */}
-                <div className="w-[1px] h-5 sm:h-6 bg-slate-200 mx-2.5 sm:mx-3 shrink-0" />
+                <div className="w-[1px] h-6 bg-slate-200 mx-3 shrink-0" />
 
                 {/* Country Code Prefix */}
-                <span className="text-[#231F20] font-semibold text-sm sm:text-base shrink-0 mr-1.5 sm:mr-2 font-['Plus_Jakarta_Sans',sans-serif]">
+                <span className="text-[#231F20] font-semibold text-base shrink-0 mr-2 font-['Plus_Jakarta_Sans',sans-serif]">
                   +880
                 </span>
 
@@ -300,7 +300,7 @@ export default function App() {
                   onChange={handleMobileChange}
                   placeholder="মোবাইল নম্বর লিখুন"
                   aria-label="মোবাইল নম্বর"
-                  className="w-full text-slate-800 text-sm sm:text-base font-medium font-['Plus_Jakarta_Sans',sans-serif] placeholder:text-slate-400 placeholder:font-['Hind_Siliguri',sans-serif] focus:outline-none bg-transparent"
+                  className="w-full text-slate-800 text-base font-medium font-['Plus_Jakarta_Sans',sans-serif] placeholder:text-slate-400 placeholder:font-['Hind_Siliguri',sans-serif] focus:outline-none bg-transparent"
                 />
               </div>
             </div>
@@ -310,9 +310,9 @@ export default function App() {
               <label htmlFor="pin-input" className="sr-only">
                 পিন লিখুন
               </label>
-              <div className="flex items-center bg-white border border-slate-200 hover:border-slate-300 focus-within:border-[#E2136E] focus-within:ring-2 focus-within:ring-[#E2136E]/20 rounded-xl sm:rounded-2xl px-3.5 sm:px-4 py-2.5 sm:py-3 transition-all shadow-xs">
+              <div className="flex items-center bg-white border border-slate-200 hover:border-slate-300 focus-within:border-[#E2136E] focus-within:ring-2 focus-within:ring-[#E2136E]/20 rounded-2xl px-4 py-3 sm:py-3.5 transition-all shadow-xs">
                 {/* Lock icon */}
-                <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 shrink-0" />
+                <Lock className="w-5 h-5 text-slate-500 shrink-0" />
 
                 {/* PIN Input (16px base font prevents iOS auto-zoom) */}
                 <input
@@ -324,32 +324,32 @@ export default function App() {
                   onChange={handlePinChange}
                   placeholder="পিন লিখুন"
                   aria-label="পিন"
-                  className="w-full text-slate-800 text-sm sm:text-base font-medium tracking-wider pl-3 sm:pl-4 focus:outline-none bg-transparent placeholder:tracking-normal placeholder:font-normal placeholder:text-slate-400"
+                  className="w-full text-slate-800 text-base font-medium tracking-wider pl-4 focus:outline-none bg-transparent placeholder:tracking-normal placeholder:font-normal placeholder:text-slate-400"
                 />
 
                 {/* Show/Hide PIN Button */}
                 <button
                   type="button"
                   onClick={() => setShowPin(!showPin)}
-                  className="p-1 text-slate-400 hover:text-[#E2136E] transition-colors focus:outline-none cursor-pointer"
+                  className="p-1.5 text-slate-400 hover:text-[#E2136E] transition-colors focus:outline-none cursor-pointer"
                   aria-label={showPin ? 'পিন লুকান' : 'পিন দেখুন'}
                   title={showPin ? 'পিন লুকান' : 'পিন দেখুন'}
                 >
-                  {showPin ? <EyeOff className="w-4 h-4 sm:w-5 sm:h-5" /> : <Eye className="w-4 h-4 sm:w-5 sm:h-5" />}
+                  {showPin ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
               </div>
             </div>
 
             {/* Login CTA Button */}
-            <div className="space-y-1.5 pt-0.5">
+            <div className="space-y-2 pt-1">
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-[#E2136E] hover:bg-[#C20E5C] active:bg-[#A80048] text-white font-semibold text-base sm:text-lg py-2.5 sm:py-3 px-6 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-md shadow-[#E2136E]/20 active:scale-[0.99] transition-all duration-150 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full bg-[#E2136E] hover:bg-[#C20E5C] active:bg-[#A80048] text-white font-semibold text-lg py-3.5 px-6 rounded-2xl flex items-center justify-center shadow-md shadow-[#E2136E]/20 active:scale-[0.99] transition-all duration-150 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
               >
                 {isLoading ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                     <span>যাচাই করা হচ্ছে...</span>
                   </div>
                 ) : (
@@ -360,14 +360,14 @@ export default function App() {
           </form>
 
           {/* 3. Forgot PIN Link */}
-          <div className="mt-2.5 sm:mt-3 text-center">
+          <div className="mt-3.5 sm:mt-4 text-center">
             <button
               type="button"
               onClick={() => setIsForgotPinOpen(true)}
-              className="inline-flex items-center gap-1 text-[#E2136E] hover:text-[#C20E5C] font-semibold text-xs sm:text-sm transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1 text-[#E2136E] hover:text-[#C20E5C] font-semibold text-sm sm:text-base transition-colors cursor-pointer"
             >
               <span>পিন ভুলে গেছেন?</span>
-              <ChevronRight className="w-3.5 h-3.5 stroke-[2.5]" />
+              <ChevronRight className="w-4 h-4 stroke-[2.5]" />
             </button>
           </div>
 
@@ -381,23 +381,23 @@ export default function App() {
                 setIsSecurityInfoOpen(true);
               }
             }}
-            className="mt-2.5 sm:mt-3.5 p-2.5 sm:p-3 bg-[#FDF2F7] border border-[#FCE7F3] rounded-xl sm:rounded-2xl flex items-center gap-3 cursor-pointer hover:bg-pink-100/60 hover:border-pink-200 transition-all text-left shadow-xs group"
+            className="mt-5 sm:mt-6 p-3.5 sm:p-4 bg-[#FDF2F7] border border-[#FCE7F3] rounded-2xl flex items-center gap-3.5 cursor-pointer hover:bg-pink-100/60 hover:border-pink-200 transition-all text-left shadow-xs group"
           >
             <div className="shrink-0 p-1 rounded-xl group-hover:scale-105 transition-transform">
-              <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-[#E2136E]" />
+              <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 text-[#E2136E]" />
             </div>
             <div className="flex-1">
-              <h3 className="text-xs sm:text-sm font-bold text-[#231F20] leading-snug">
+              <h3 className="text-sm sm:text-[15px] font-bold text-[#231F20] leading-snug">
                 আপনার নিরাপত্তা আমাদের অগ্রাধিকার
               </h3>
-              <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
+              <p className="text-xs sm:text-[13px] text-slate-500 mt-0.5">
                 আপনার তথ্য সর্বসময় নিরাপদ থাকবে
               </p>
             </div>
           </div>
 
           {/* 5. Registration Section */}
-          <div className="mt-2 sm:mt-3 mb-1 text-center text-xs sm:text-sm">
+          <div className="mt-5 sm:mt-6 mb-2 text-center text-sm sm:text-[15px]">
             <span className="text-slate-700">অ্যাকাউন্ট নেই? </span>
             <button
               type="button"
@@ -405,7 +405,7 @@ export default function App() {
               className="inline-flex items-center text-[#E2136E] hover:text-[#C20E5C] font-bold transition-colors cursor-pointer ml-1"
             >
               <span>নিবন্ধন করুন</span>
-              <ChevronRight className="w-3.5 h-3.5 ml-0.5 stroke-[2.5]" />
+              <ChevronRight className="w-4 h-4 ml-0.5 stroke-[2.5]" />
             </button>
           </div>
         </div>
