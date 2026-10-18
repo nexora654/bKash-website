@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "bKash - নিরাপদ মোবাইল ব্যাংকিং",
+  "short_name": "bKash",
+  "description": "নিরাপদ মোবাইল ব্যাংকিং লগইন প্ল্যাটফর্ম।",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF5F7",
+  "theme_color": "#E2136E",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

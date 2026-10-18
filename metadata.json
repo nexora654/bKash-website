@@ -1,0 +1,6 @@
+{
+  "name": "bKash - নিরাপদ মোবাইল ব্যাংকিং লগইন",
+  "description": "bKash modern mobile banking login and secure authentication portal in Bengali.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
