@@ -4,12 +4,23 @@
   html {
     -webkit-text-size-adjust: 100%;
     touch-action: manipulation;
+    height: 100%;
+    width: 100%;
   }
   body {
     font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #root {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
   }
 }
 

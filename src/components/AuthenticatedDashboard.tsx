@@ -128,7 +128,7 @@ export const AuthenticatedDashboard: React.FC<AuthenticatedDashboardProps> = ({
   };
 
   return (
-    <div className="w-full max-w-md mx-auto bg-white sm:rounded-[36px] sm:shadow-2xl sm:border sm:border-pink-100 overflow-hidden text-slate-800 flex flex-col min-h-screen sm:min-h-[850px] font-['Hind_Siliguri',sans-serif]">
+    <div className="w-full max-w-md mx-auto bg-white sm:rounded-[36px] sm:shadow-2xl sm:border sm:border-pink-100 overflow-y-auto text-slate-800 flex flex-col min-h-[100dvh] sm:min-h-0 sm:max-h-[min(820px,calc(100dvh-1.5rem))] font-['Hind_Siliguri',sans-serif]">
       {/* Top Header in bKash pink gradient */}
       <div className="bg-gradient-to-r from-[#9E0047] via-[#C20E5C] to-[#E2136E] p-6 text-white relative">
         <div className="flex items-center justify-between mb-4">

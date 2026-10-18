@@ -17,7 +17,7 @@ export const TopWaveDecoration: React.FC<{ className?: string }> = ({ className 
         viewBox="0 0 1000 460"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto block max-h-[160px] sm:max-h-[190px]"
+        className="w-full h-auto block max-h-[100px] xs:max-h-[120px] sm:max-h-[160px]"
         preserveAspectRatio="xMinYMin meet"
       >
         <defs>

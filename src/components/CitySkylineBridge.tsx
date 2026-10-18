@@ -18,7 +18,7 @@ export const CitySkylineBridge: React.FC<{ className?: string }> = ({ className 
         viewBox="0 0 600 240"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto block"
+        className="w-full h-auto max-h-[110px] sm:max-h-[155px] block"
         preserveAspectRatio="xMidYMax slice"
       >
         <defs>
